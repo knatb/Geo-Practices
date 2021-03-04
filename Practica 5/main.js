@@ -1,6 +1,12 @@
-function iniciaMapa() {
+var informacion = '<h2>Universidad de la Salle Bajío</h2>';
+informacion += '<p>Avenida Universidad 602</p>';
+informacion += '<p>Horario: 7:00 am - 4:00 pm</p>';
 
-  var mapa = document.querySelector('#mapa');
+var mapa = document.querySelector('#mapa');
+
+mybutton = document.getElementById("myBtn");
+
+function iniciaMapa() {  
   var map = new google.maps.Map(mapa, propiedades);  
 
   var propiedades = {
@@ -14,7 +20,6 @@ function iniciaMapa() {
   if(navigator.geolocation){
 
     navigator.geolocation.getCurrentPosition(position => {
-
       console.log(position);
 
       let posicion = {
@@ -30,7 +35,7 @@ function iniciaMapa() {
       map.setCenter(posicion);
 
       const infowindow = new google.maps.InfoWindow({
-        content: 'Contenido del maarcador'
+        content: informacion
       });
 
       marcador.addListener('click', () => {
@@ -40,10 +45,6 @@ function iniciaMapa() {
   }  
 }
 
-//Get the button:
-mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
