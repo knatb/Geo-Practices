@@ -7,8 +7,6 @@ var mapa = document.querySelector('#mapa');
 mybutton = document.getElementById("myBtn");
 
 function iniciaMapa() {  
-  var map = new google.maps.Map(mapa, propiedades);  
-
   var propiedades = {
     center: {
       lat: 21.152639,
@@ -16,6 +14,7 @@ function iniciaMapa() {
     },
     zoom: 14
   }
+  var map = new google.maps.Map(mapa, propiedades); 
 
   if(navigator.geolocation){
 
