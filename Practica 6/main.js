@@ -10,29 +10,27 @@ var propiedades = {
   zoom: 20
 }
 
-var icono = {
-  url: 'https://www.gifsanimados.org/data/media/67/coche-y-automovil-imagen-animada-0097.gif',
-  scaledSize: new google.maps.Size(50,50),
-  origin: new google.maps.Point(0,0),
-  anchor: new google.maps.Point(0,0),
-
-}
-
-const marcador = new google.maps.Marker({ 
-  position: coordernadas, 
-  icon: icono
-});
-
 function iniciaMapa() {
-  
+
   var map = new google.maps.Map(mapa, propiedades);
+
+  var icono = {
+    url: 'https://www.gifsanimados.org/data/media/67/coche-y-automovil-imagen-animada-0097.gif',
+    scaledSize: new google.maps.Size(50,50),
+    origin: new google.maps.Point(0,0),
+    anchor: new google.maps.Point(0,0)
+  }
+  
+  var marcador = new google.maps.Marker({ 
+    position: coordernadas, 
+    icon: icono
+  });  
 
   if(navigator.geolocation){
     movePosition(marcador);
-  }  
+  }
 
   function movePosition(marcador){
-
     navigator.geolocation.getCurrentPosition(position => {
       console.log(position);
 
