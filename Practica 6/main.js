@@ -6,11 +6,12 @@ var coordernadas = {
   lng: 0
 }
 
-function iniciaMapa() {
-  var propiedades = {
-    center: coordernadas,
-    zoom: 20
-  }
+var propiedades = {
+  center: coordernadas,
+  zoom: 20
+}
+
+function iniciaMapa() {  
 
   map = new google.maps.Map(mapa, propiedades);
 
@@ -23,7 +24,8 @@ function iniciaMapa() {
   
   var marcador = new google.maps.Marker({ 
     position: coordernadas, 
-    icon: icono
+    icon: icono,
+    map: map
   });  
 
   if(navigator.geolocation){
