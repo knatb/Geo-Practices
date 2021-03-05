@@ -5,14 +5,14 @@ var coordernadas = {
   lat: 0,
   lng: 0
 }
-var propiedades = {
-  center: coordernadas,
-  zoom: 20
-}
 
 function iniciaMapa() {
+  var propiedades = {
+    center: coordernadas,
+    zoom: 20
+  }
 
-  var map = new google.maps.Map(mapa, propiedades);
+  map = new google.maps.Map(mapa, propiedades);
 
   var icono = {
     url: 'https://www.gifsanimados.org/data/media/67/coche-y-automovil-imagen-animada-0097.gif',
