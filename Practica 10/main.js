@@ -1,5 +1,5 @@
 var apiUrl = 'https://corona.lmao.ninja/v3/covid-19/countries';
-var mapa = document.getElementById('mapa');
+//var mapa = document.getElementById('mapa');
 
 var initCoords = {
     lat: 0,
@@ -17,7 +17,7 @@ function iniciaMapa(){
     fetch(apiUrl)
     .then( function(response){
         response.json().then(function(data){
-            const map = new google.maps.Map(mapa, properties);
+            const map = new google.maps.Map(document.getElementById('mapa'), properties);
 
             data.forEach(marcador => {
                 fetch(apiUrl)
