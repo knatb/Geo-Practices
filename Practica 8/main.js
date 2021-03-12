@@ -9,7 +9,7 @@ fetch('https://corona.lmao.ninja/v3/covid-19/countries')
                 let dupla = document.createElement('div');
                 dupla.className = 'row border bg-light';
                 paises.appendChild(dupla);
-
+                
                 let column = document.createElement('div');
                 column.className = 'col-12';
                 paises.appendChild(column);
