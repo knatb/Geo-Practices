@@ -38,4 +38,14 @@ function iniciaMapa(){
 
     const marcadores = getMarkers();
     console.log(marcadores);
+
+    for(marcador in marcadores){
+
+        let marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
+            title: marcador.name
+        })
+
+    }
 }
