@@ -14,7 +14,7 @@ var properties = {
 
 function iniciaMapa(){
 
-    fetch('https://sistemasgeo.com/fetch/paises.json')
+    fetch('paises.json')
     .then( function(response){
         response.json().then(function(data){
             const map = new google.maps.Map(document.getElementById('mapa'), properties);
