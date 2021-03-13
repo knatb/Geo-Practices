@@ -37,7 +37,7 @@ function iniciaMapa(){
     const map = new google.maps.Map(mapa, properties);
 
     const marcadores = getMarkers();
-    console.log(marcadores);
+    //console.log(marcadores);
 
     for(marcador in marcadores){
 

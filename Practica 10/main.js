@@ -25,7 +25,7 @@ function iniciaMapa(){
                     //console.log(response);
 
                     response.json().then(function(dataCountries){
-                        console.log(dataCountries);
+                    // console.log(dataCountries);
 
                         dataCountries.forEach( registro => {
 
@@ -53,6 +53,6 @@ function iniciaMapa(){
         });
     })
     .catch( function(error){
-        console.log('Ocurrió un error');
+        console.log('Ocurrió un error', error);
     })
 }
