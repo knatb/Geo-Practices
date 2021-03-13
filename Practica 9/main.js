@@ -1,51 +1,45 @@
-var mapa = document.querySelector('#mapa');
-
-var initCoords = {
+var coords = {
     lat: 0,
     lng: 0
-};
-
-var properties = {
-    center: initCoords,
+  }
+  
+  var propiedades = {
+    center: coords,
     zoom: 2
-};
-
-
-function getMarkers(){
-
-    const markers = [
-    {
-        name: "México",
+  }
+  
+  function obtenerMarcadores() {
+    const markers = [{
+        name: "Mexico",
         longitude: "-99.1276",
         latitude: "19.427"
-    }, {
-        name: "Brasil",
+      },
+      {
+        name: "Brazil",
         longitude: "-47.9292",
         latitude: "-15.7801"
-    }, {
-        name: "España",
+      },
+      {
+        name: "Spain",
         longitude: "-3.70327",
         latitude: "40.4167"
-    }
-    ];
+      }
+    ]
+  
     return markers;
-
-}
-
-function iniciaMapa(){
-
-    const map = new google.maps.Map(mapa, properties);
-
-    const marcadores = getMarkers();
-    //console.log(marcadores);
-
-    for(marcador in marcadores){
-
-        let marker = new google.maps.Marker({
-            map: map,
-            position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
-            title: marcador.name
-        })
-
+  }
+  
+  function iniciaMapa() {
+    const mapa = new google.maps.Map(document.getElementById('mapa'), propiedades);
+    
+    const marcadores = obtenerMarcadores();
+  
+  
+    for(marcador of marcadores){
+      let marker = new google.maps.Marker({
+        map: mapa,
+        position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
+        title: marcador.name,
+      });
     }
-}
+  }
