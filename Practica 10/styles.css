@@ -4,8 +4,14 @@
 }
 
 body{
+    height: 100%;
     background: #ccc;
 }
+
+html{
+    height: 100%;
+}
+
 #mapa{
     width: 100%;
 }
