@@ -1,7 +1,7 @@
-var btnR = document.getElementById('btnroadmap')
-var btnS = document.getElementById('btnsatellite')
-var btnH = document.getElementById('btnhybrid')
-var btnT = document.getElementById('btnterrain')
+var btnR = document.getElementById('btnroadmap');
+var btnS = document.getElementById('btnsatelite');
+var btnH = document.getElementById('btnhybrid');
+var btnT = document.getElementById('btnterrain');
 
 var coordenadas = { 
     lat: -31.563910, lng: 147.154312 
