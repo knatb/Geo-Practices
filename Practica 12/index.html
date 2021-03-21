@@ -28,12 +28,11 @@
   <!--MAPA-->
   <div class="container-fluid">
       <div class="container">
-          <div class="row">
-              <div class="col-6 my-3">
-                <h2 class="text-center">Select a language for Google Maps</h2>
-                <div id="mapa"></div>
+          <div class="row  my-3">
+              <div class="col-xs-12 col-lg-6">
+                <h2 class="text-center">Select a language for Google Maps</h2>                
               </div>
-              <div class="col-6 my-3" >
+              <div class="col-xs-12 col-lg-6">
                 <form>
                   <select id='idioma' name="idioma" class="form-control" onchange="this.form.submit()">
                     <option value="es">Español</option>
@@ -42,8 +41,13 @@
                     <option value="zh">Chino</option>
                     <option value="ja">Japonés</option>
                   </select>
-                </form>                
+                </form>   
               </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div id="mapa"></div>
+            </div>
           </div>
       </div>
   </div>
