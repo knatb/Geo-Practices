@@ -1,13 +1,4 @@
-var mapa = document.getElementById('mapa');
-var propiedades = { 
-    lat: -21.152639, 
-    lng: -101.711598,
-    zoom: 14,
-    mapTypeControlOptions: ['roadmap', 'satelite', 'hybrid', 'terrain', 'style_map']
-};
-
 function iniciaMapa() {
-
   var styledMapType = new google.maps.StyledMapType([
         {
           "elementType": "geometry",
@@ -145,8 +136,20 @@ function iniciaMapa() {
         {name: 'Mapa Oscuro'}
   );
 
-    var map = new google.maps.Map(mapa, propiedades);
+  var mapa = document.getElementById('mapa');
+  var propiedades = { 
+      center: { 
+        lat: 21.152639, lng:  -101.711598
+      },
+      zoom: 14,
+      mapTypeControlOptions: {
+        mapTypeIds : ['roadmap', 'satelite', 'hybrid', 'terrain', 'style_map']
+      }
+  };
 
-    map.mapTypes.set('style_map', styledMapType);
-    map.setMapTypeId('style_map');
-  }
+  var map = new google.maps.Map(mapa, propiedades);
+
+  map.mapTypes.set('style_map', styledMapType);
+  map.setMapTypeId('style_map');
+
+}
