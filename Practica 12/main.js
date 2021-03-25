@@ -1,5 +1,5 @@
 var coordenadas = { 
-    lat: -31.563910, lng: 147.154312 
+  lat: -31.563910, lng: 147.154312 
 }
 
 const queryString = window.location.search;
@@ -18,11 +18,11 @@ script.src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD6EILSc1qFkatoKwx
 document.head.appendChild(script);
 
 function iniciaMapa() {
-    var map = new google.maps.Map(
-      document.getElementById('mapa'), {
-        map: map,
-        center: coordenadas,
-        zoom: 3
-      }
-    );
-  }
+  var map = new google.maps.Map(
+    document.getElementById('mapa'), {
+      map: map,
+      center: coordenadas,
+      zoom: 3
+    }
+  );
+}
