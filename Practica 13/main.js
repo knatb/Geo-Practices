@@ -65,7 +65,7 @@ function iniciaMapa() {
         {
             "featureType": "poi.school",
             "elementType": "geometry",
-            "stylers": [{"color": "#ff40ff"}]
+            "stylers": [{"color": "#635C51"}]
         },
         {
             "featureType": "road",
