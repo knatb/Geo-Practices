@@ -1,4 +1,3 @@
-
 var mapa = document.getElementById('mapa');
 var propiedades = { 
     lat: -21.152639, 
@@ -148,6 +147,6 @@ function iniciaMapa() {
 
     var map = new google.maps.Map(mapa, propiedades);
 
-    map.mapTypes.set('style_map', styleMapType);
+    map.mapTypes.set('style_map', styledMapType);
     map.setMapTypeId('style_map');
   }
