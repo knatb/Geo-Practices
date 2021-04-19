@@ -64,5 +64,5 @@ function iniciaMapa(){
 
     infoWindow = new google.maps.InfoWindow();
 
-    map = new google.maps.Map(document.getElementById('map'),propiedades);
+    map = new google.maps.Map(document.getElementById('mapa'),propiedades);
 }
