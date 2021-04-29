@@ -1,13 +1,11 @@
 var map;
 var service;
 var infoWindow;
-
 var btnBuscar = document.getElementById('btnBuscar');
 
 btnBuscar.addEventListener('click', function(){
 
     var buscar = document.getElementById('buscar');
-
     console.log(buscar.value);
 
     var request = {
@@ -17,17 +15,12 @@ btnBuscar.addEventListener('click', function(){
 
     service = new google.maps.places.PlacesService(map);
 
-
     service.findPlaceFromQuery(request, function(results, status){
-
         if( status === google.maps.places.PlacesServiceStatus.OK ){
-
             for ( var i=0; i< results.length; i++) {
                 createMarker(results[i]);
             }
-
             map.setCenter(results[0].geometry.location);
-
         }
 
     });
@@ -55,7 +48,6 @@ btnBuscar.addEventListener('click', function(){
 });
 
 function iniciaMapa(){
-
     var coordenadas = {  lat: 21.152639, lng:  -101.711598 };
     var propiedades = {
         center: coordenadas,
@@ -63,6 +55,5 @@ function iniciaMapa(){
     };
 
     infoWindow = new google.maps.InfoWindow();
-
     map = new google.maps.Map(document.getElementById('mapa'),propiedades);
 }
