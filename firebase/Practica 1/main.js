@@ -25,8 +25,8 @@ function renderProductos(doc){
 
     borrar.className = "btn btn-danger m-3";
 
-    nombre.textContent = doc.data().nombre + " ";
-    codigo.textContent = doc.data().codigo + " ";
+    nombre.textContent = "Nombre: " + doc.data().nombre + " ";
+    codigo.textContent = "Código: " + doc.data().codigo + " ";
     borrar.textContent = "Borrar  ";
 
     li.setAttribute("id", doc.id);
@@ -42,7 +42,7 @@ function renderProductos(doc){
     } );
 }
 
-//Guarda datos
+//Guarda los datos
 formulario.addEventListener('submit',(e)=> {
     e.preventDefault();
     db.collection('productos').add({
