@@ -6,15 +6,15 @@
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <title>Firebase - Práctica 3</title>    
 
-    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img src="../../images/worldwide.png" alt="" width="30" class="d-inline-block align-text-top">DLS EATS</a>
+        <a class="navbar-brand" href="#"><img src="../../images/worldwide.png" alt="" width="30" class="d-inline-block align-text-top mx-3">DLS EATS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,12 +42,12 @@
                 <form id="formaingresar">
                     <div class="row m-2">
                         <div class="col-12">
-                            <input type="email" class="form-control" required id="correo" placeholder="Ingrese su correo electrónico">
+                            <input type="email" class="form-control" required id="mail" placeholder="Ingrese su correo electrónico">
                         </div>
                     </div>
                     <div class="row m-2">
                         <div class="col-12">
-                            <input type="password" class="form-control" required id="contrasena" placeholder="Ingrese su contraseña">
+                            <input type="password" class="form-control" required id="password" placeholder="Ingrese su contraseña">
                         </div>
                     </div>
                     <div class="row text-center">
@@ -57,11 +57,6 @@
                         </div>
                     </div>
                 </form>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <span onclick="entrarGoogle()" class="btn btn-primary btn-danger">Continuar con Gmail <i class="fas fa-plus"></i></span>
-                </div>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -151,6 +146,36 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row text-center" id="listaDePlatillos">
+      
+          <div class="card col-12 col-md-4">
+            <img src="./img/pizzadepepperoni.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pizza de Pepperoni</h5>
+              <p class="card-text">Precio: 89</p>
+            </div>
+          </div>
+      
+          <div class="card col-12 col-md-4">
+            <img src="./img//pizzajamonconpina.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pizza de Jamón con piña</h5>
+              <p class="card-text">Precio: 110</p>
+            </div>
+          </div>
+      
+          <div class="card col-12 col-md-4">
+            <img src="./img//pizzadecarnes.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pizza de Carnes Frias</h5>
+              <p class="card-text">Precio: 130</p>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
     <!--FOOTER-->
     <div class="container-fluid py-5 bg-dark fixed-bottom">
         <div class="container">
@@ -164,12 +189,11 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
     <script type="text/javascript" src="scripts/conn.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
     <script type="text/javascript" src="scripts/auth.js"></script>
 </body>
 </html>   
