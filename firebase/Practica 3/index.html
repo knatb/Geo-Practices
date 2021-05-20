@@ -58,6 +58,11 @@
                     </div>
                 </form>
             </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <span onclick="entrarGoogle()" class="btn btn-primary btn-danger">Continuar con Gmail <i class="fas fa-plus"></i></span>
+                </div>
+            </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
@@ -84,12 +89,12 @@
                     </div>
                     <div class="row m-2">
                         <div class="col-12">
-                            <input type="email" class="form-control" id="rcorreo" required placeholder="Ingrese su correo electrónico">
+                            <input type="email" class="form-control" id="rmail" required placeholder="Ingrese su correo electrónico">
                         </div>
                     </div>
                     <div class="row m-2">
                         <div class="col-12">
-                            <input type="text" class="form-control" id="rcontrasena" required placeholder="Ingrese su contraseña">
+                            <input type="password" class="form-control" id="rpassword" required placeholder="Ingrese su contraseña">
                         </div>
                     </div>
                     <div class="row m-2">
@@ -146,36 +151,6 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row text-center" id="listaDePlatillos">
-      
-          <div class="card col-12 col-md-4">
-            <img src="./img/pizzadepepperoni.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pizza de Pepperoni</h5>
-              <p class="card-text">Precio: 89</p>
-            </div>
-          </div>
-      
-          <div class="card col-12 col-md-4">
-            <img src="./img//pizzajamonconpina.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pizza de Jamón con piña</h5>
-              <p class="card-text">Precio: 110</p>
-            </div>
-          </div>
-      
-          <div class="card col-12 col-md-4">
-            <img src="./img//pizzadecarnes.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pizza de Carnes Frias</h5>
-              <p class="card-text">Precio: 130</p>
-            </div>
-          </div>
-      
-        </div>
-      </div>
-
     <!--FOOTER-->
     <div class="container-fluid py-5 bg-dark fixed-bottom">
         <div class="container">
@@ -195,5 +170,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
     <script type="text/javascript" src="scripts/conn.js"></script>
     <script type="text/javascript" src="scripts/auth.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>   
