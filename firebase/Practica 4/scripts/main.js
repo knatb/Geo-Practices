@@ -45,8 +45,8 @@ const dataAccount = document.querySelector('.dataAccount');
       data.forEach(doc => {
         informacion = new google.maps.InfoWindow;
         let posicion = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
+            lat: doc.data().coordenadas.latitude,
+            lng: doc.data().coordenadas.longitude
         }
         informacion.setPosition(posicion);
         informacion.setContent(doc.data().nombre);
