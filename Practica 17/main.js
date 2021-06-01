@@ -1,3 +1,4 @@
+var map;
 var markers = [];
 
 function iniciaMapa(){
@@ -16,8 +17,8 @@ var tipo = document.getElementById("tipo");
 var valor;
 
 tipo.addEventListener("change", function () {
-valor = this.options[tipo.selectedIndex].value;
-showPlaces();
+  valor = this.options[tipo.selectedIndex].value;
+  showPlaces();
 });
 
 function showPlaces(){
@@ -33,7 +34,7 @@ function showPlaces(){
       service.nearbySearch({
         location: coordenadas,
         radius: 1000,
-        type: ['atm','dentist']
+        type: [valor]
       }, function(results, status, pagination){
         if(status !== 'OK') return;
         createMarkers(results);
@@ -46,6 +47,7 @@ function createMarkers(places) {
   var bounds = new google.maps.LatLngBounds();
 
   cleanMarkers();
+
   for (var i = 0, place; (place = places[i]); i++) {
       var marker = new google.maps.Marker({
       map: map,
@@ -61,9 +63,7 @@ function createMarkers(places) {
           position: this.position,
       });
       infowindow.open(map);
-      setTimeout(function () {
-          infowindow.close();
-      }, 3000);
+      setTimeout(function () { infowindow.close(); }, 3000);
       });
 
       var li = document.createElement("li");
@@ -75,10 +75,10 @@ function createMarkers(places) {
   }
 
   function cleanMarkers() {
-  for (var i = 0; i < markers.length; i++) {
-      markers[i].setMap(null);
-  }
-  while (placesList.hasChildNodes()) {
-      placesList.removeChild(placesList.firstChild);
-  }
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(null);
+    }
+    while (placesList.hasChildNodes()) {
+        placesList.removeChild(placesList.firstChild);
+    }
 }
