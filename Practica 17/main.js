@@ -17,7 +17,7 @@ var valor;
 
 tipo.addEventListener("change", function () {
 valor = this.options[tipo.selectedIndex].value;
-muestraLugares();
+showPlaces();
 });
 
 function showPlaces(){
