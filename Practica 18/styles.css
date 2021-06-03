@@ -1,0 +1,14 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #bebebe !important;
+}
+
+#map, #map2 {
+  width: 100%;
+  height: 420px;
+  padding: 10px
+}
+
