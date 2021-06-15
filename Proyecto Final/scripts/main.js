@@ -38,7 +38,7 @@ const listaloggedout = document.querySelectorAll('.logged-out');
                     <img class="img-fluid shadow rounded" id='service' src="./img/services/${service.imagen}" alt="${service.nombre}">
                     <h2 class="py-3">${service.nombre}</h2>
                     <p class="text-align: justify">${service.descripcion}</p>
-                    <p class="text-danger">$${platillo.precio}.00 pesos</p>
+                    <p class="text-danger">$${service.precio}.00 MXN</p>
                     <a href="https://paypal.me/knatb08/${service.precio}" target="_blank">
                         <button class="btn btn-primary">Pagar Ahora</button>
                     </a>
