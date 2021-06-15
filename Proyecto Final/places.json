@@ -1,0 +1,37 @@
+[
+    {
+      "PlaceName": "Teoremaz Escuela de Matemáticas",
+      "Latitude": "21.1285597",
+      "Longitude": "-101.6487504"
+    },
+    {
+        "PlaceName": "Instituto Tecnológico de León Campus I",
+        "Latitude": "21.1090617",
+        "Longitude": "-101.6296742"
+    },
+    {
+        "PlaceName": "Instituto Tecnológico de León Campus II",
+        "Latitude": "21.139204",
+        "Longitude": "-101.7199025"
+    },
+    {
+        "PlaceName": "UG - Campus León, División de Ciencias e Ingenierías",
+        "Latitude": "21.1529038",
+        "Longitude": "-101.7057714"
+    },
+    {
+        "PlaceName": "Universidad Tecnológica de León",
+        "Latitude": "21.0614393",
+        "Longitude": "-101.5883369"
+    },
+    {
+        "PlaceName": "Escuela Nacional de Estudios Superiores Unidad León (ENES León)",
+        "Latitude": "21.0417449",
+        "Longitude": "-101.6752001"
+    },
+    {
+        "PlaceName": "Unidad Profesional Interdisciplinaria de Ingeniería Campus Guanajuato IPN",
+        "Latitude": "21.0128089",
+        "Longitude": "-101.5135326"
+    }
+]

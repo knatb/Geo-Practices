@@ -34,11 +34,10 @@ const listaloggedout = document.querySelectorAll('.logged-out');
             const service = doc.data();
             console.log(service);
             const columna = `
-                <div class="col-12 col-md-4">
-                    <img id='service' src="./img/services/${service.imagen}" alt="${service.nombre}">
-                    <p>${service.nombre}</p>
-                    <p>${service.descripcion}</p>
-                    <p class="text-danger">$${service.precio}.00 pesos</p>
+                <div class="col-12 col-md-4" data-aos="fade-right" data-aos-duration="4000">
+                    <img class="img-fluid shadow rounded" id='service' src="./img/services/${service.imagen}" alt="${service.nombre}">
+                    <h2 class="py-3 text-danger">${service.nombre}</h2>
+                    <p class="text-align: justify">${service.descripcion}.00 pesos</p>
                     <a href="https://paypal.me/knatb08/${service.precio}" target="_blank">
                         <button class="btn btn-primary">Pagar Ahora</button>
                     </a>
