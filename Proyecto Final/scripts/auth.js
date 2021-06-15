@@ -110,7 +110,7 @@ entrarGoogle = () => {
           <p>Correo: ${ user.email}</p>
           <img src="${ user.photoURL }" width="50px">
       `;
-      datosdelacuenta.innerHTML = html;
+      dataAccount.innerHTML = html;
 
       $('#loginmodal').modal('hide');
       loginform.reset();
