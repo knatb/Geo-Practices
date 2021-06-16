@@ -79,7 +79,7 @@ function iniciaMapa(){
                     content: informacion
                 });
 
-                if(registro.PlaceName == marcador.PlaceName){
+                if(marcador.PlaceName == marcador.PlaceName){
                     let marker = new google.maps.Marker({
                         map: map,
                         position: new google.maps.LatLng(marcador.Latitude, marcador.Longitude),
