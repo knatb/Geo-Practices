@@ -23,3 +23,20 @@ html, body{
 .logged-in, .logged-out {
   display: none;
 }
+
+.fontList{  
+  font-family: 'Helvetica' !important;
+  font-weight: normal;
+  color: #fff;
+}
+
+.title-footer{
+  color: #ff8d14;
+  font-weight: bold;
+}
+
+.footerIcons ul{
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+}
