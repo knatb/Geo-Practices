@@ -8,7 +8,7 @@ html, body{
     background-image: url('./img/fondo.jpg');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
   }
 /*CUSTOM SCROLLBAR*/
 ::-webkit-scrollbar{
@@ -51,6 +51,7 @@ html, body{
   color: #fff; 
   text-align: justify;
   padding: 30px;
+  font-size: 20px;
 }
 
 .fontList{  
