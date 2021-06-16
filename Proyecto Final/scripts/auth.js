@@ -84,6 +84,8 @@ loginform.addEventListener('submit',(e)=>{
   let mail = loginform['mail'].value;
   let password = loginform['password'].value;
 
+  console.log('CLICK')
+
   auth.signInWithEmailAndPassword(mail,password).then( cred =>{
       $('#loginmodal').modal('hide');
       loginform.reset();
