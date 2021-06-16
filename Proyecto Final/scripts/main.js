@@ -53,18 +53,61 @@ const listaloggedout = document.querySelectorAll('.logged-out');
     }
  };
 
- 
-function iniciaMapa() {
-var coordenadas = { lat: 21.152639, lng: -101.711598  }
 
-var map = new google.maps.Map(
-    document.getElementById('mapa'),
-    {
-        center: coordenadas,
-        zoom: 15
-    }
-);
-var marcador = new google.maps.Marker({ position: coordenadas, map: map });
+var initCoords = {
+    lat: 21.128398,
+    lng: -101.6486384
+};
+
+var properties = {
+    center: initCoords,
+    zoom: 12
+};
+
+
+function iniciaMapa(){
+
+    fetch('places.json')
+    .then( function(response){
+        response.json().then(function(data){
+            const map = new google.maps.Map(document.getElementById('mapa'), properties);
+
+            data.forEach(marcador => {
+                fetch(apiUrl)
+                .then(function(response){
+                    //console.log(response);
+
+                    response.json().then(function(dataPlaces){
+                    // console.log(dataPlaces);
+
+                        dataPlaces.forEach( registro => {
+
+                            var informacion = "<strong>Lugar: </strong>" + registro.PlaceName;
+
+                            var infoWindow = new google.maps.InfoWindow({
+                                content: informacion
+                            });
+
+                            if(registro.PlaceName == marcador.PlaceName){
+                                let marker = new google.maps.Marker({
+                                    map: map,
+                                    position: new google.maps.LatLng(marcador.Latitude, marcador.Longitude),
+                                    title: marcador.PlaceName
+                                })
+
+                                marker.addListener('click', function(){
+                                    infoWindow.open(map, marker);
+                                })
+                            }
+                        })                        
+                    }) 
+                })
+            })
+        });
+    })
+    .catch( function(error){
+        console.log('Ocurrió un error', error);
+    })
 }
 
 //Get the button:
