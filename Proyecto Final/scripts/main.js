@@ -73,42 +73,30 @@ function iniciaMapa(){
             const map = new google.maps.Map(document.getElementById('mapa'), properties);
 
             data.forEach(marcador => {
-                fetch(apiUrl)
-                .then(function(response){
-                    //console.log(response);
+                var informacion = "<strong>Lugar: </strong>" + marcador.PlaceName;
 
-                    response.json().then(function(dataPlaces){
-                    // console.log(dataPlaces);
+                var infoWindow = new google.maps.InfoWindow({
+                    content: informacion
+                });
 
-                        dataPlaces.forEach( registro => {
+                if(registro.PlaceName == marcador.PlaceName){
+                    let marker = new google.maps.Marker({
+                        map: map,
+                        position: new google.maps.LatLng(marcador.Latitude, marcador.Longitude),
+                        title: marcador.PlaceName
+                    })
 
-                            var informacion = "<strong>Lugar: </strong>" + registro.PlaceName;
-
-                            var infoWindow = new google.maps.InfoWindow({
-                                content: informacion
-                            });
-
-                            if(registro.PlaceName == marcador.PlaceName){
-                                let marker = new google.maps.Marker({
-                                    map: map,
-                                    position: new google.maps.LatLng(marcador.Latitude, marcador.Longitude),
-                                    title: marcador.PlaceName
-                                })
-
-                                marker.addListener('click', function(){
-                                    infoWindow.open(map, marker);
-                                })
-                            }
-                        })                        
-                    }) 
-                })
-            })
+                    marker.addListener('click', function(){
+                        infoWindow.open(map, marker);
+                    })
+                }
         });
     })
     .catch( function(error){
         console.log('Ocurrió un error', error);
     })
-}
+    }
+)}
 
 //Get the button:
 mybutton = document.getElementById("myBtn");
