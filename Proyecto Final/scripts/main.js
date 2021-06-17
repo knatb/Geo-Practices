@@ -73,7 +73,14 @@ function iniciaMapa(){
             const map = new google.maps.Map(document.getElementById('mapa'), properties);
 
             data.forEach(marcador => {
-                var informacion = "<strong>Lugar: </strong>" + marcador.PlaceName;
+                var informacion = 
+                `<div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">${marcador.PlaceName}</h5>
+                        <p class="card-text">${marcador.Description}</p>
+                        <a href="${marcador.Page}" class="btn btn-secondary">Ir al sitio</a>
+                    </div>
+                </div>`;
 
                 var infoWindow = new google.maps.InfoWindow({
                     content: informacion

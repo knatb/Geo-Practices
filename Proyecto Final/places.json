@@ -1,37 +1,51 @@
 [
     {
-      "PlaceName": "Teoremaz Escuela de Matemáticas",
-      "Latitude": "21.1285597",
-      "Longitude": "-101.6487504"
+        "PlaceName": "Teoremaz",
+        "Description": "Teoremaz Escuela de Matemáticas",
+        "Latitude": "21.1285597",
+        "Longitude": "-101.6487504",
+        "Page": "#"        
     },
     {
-        "PlaceName": "Instituto Tecnológico de León Campus I",
+        "PlaceName": "ITL",
+        "Description": "Instituto Tecnológico de León Campus I",
         "Latitude": "21.1090617",
-        "Longitude": "-101.6296742"
+        "Longitude": "-101.6296742",
+        "Page": "https://leon.tecnm.mx"
     },
     {
-        "PlaceName": "Instituto Tecnológico de León Campus II",
+        "PlaceName": "ITL",
+        "Description": "Instituto Tecnológico de León Campus II",
         "Latitude": "21.139204",
-        "Longitude": "-101.7199025"
+        "Longitude": "-101.7199025",
+        "Page": "https://leon.tecnm.mx"
     },
     {
-        "PlaceName": "UG - Campus León, División de Ciencias e Ingenierías",
+        "PlaceName": "UG",
+        "Description": "Campus León, División de Ciencias e Ingenierías",
         "Latitude": "21.1529038",
-        "Longitude": "-101.7057714"
+        "Longitude": "-101.7057714",
+        "Page": "https://www.ugto.mx/campusleon/"
     },
     {
-        "PlaceName": "Universidad Tecnológica de León",
+        "PlaceName": "UTL",
+        "Description": "Universidad Tecnológica de León",
         "Latitude": "21.0614393",
-        "Longitude": "-101.5883369"
+        "Longitude": "-101.5883369",
+        "Page": "http://www.utleon.edu.mx"
     },
     {
-        "PlaceName": "Escuela Nacional de Estudios Superiores Unidad León (ENES León)",
+        "PlaceName": "UNAM",
+        "Description": "Escuela Nacional de Estudios Superiores Unidad León (ENES León)",
         "Latitude": "21.0417449",
-        "Longitude": "-101.6752001"
+        "Longitude": "-101.6752001",
+        "Page": "https://enes.unam.mx"
     },
     {
-        "PlaceName": "Unidad Profesional Interdisciplinaria de Ingeniería Campus Guanajuato IPN",
+        "PlaceName": "UPIIG",
+        "Description": "Unidad Profesional Interdisciplinaria de Ingeniería Campus Guanajuato IPN",
         "Latitude": "21.0128089",
-        "Longitude": "-101.5135326"
+        "Longitude": "-101.5135326",
+        "Page": "https://www.upiig.ipn.mx"
     }
 ]
