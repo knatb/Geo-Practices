@@ -78,7 +78,7 @@ function iniciaMapa(){
                     <div class="card-body">
                         <h5 class="card-title">${marcador.PlaceName}</h5>
                         <p class="card-text">${marcador.Description}</p>
-                        <a href="${marcador.Page}" class="btn btn-secondary">Ir al sitio</a>
+                        <a href="${marcador.Page}" class="btn btn-secondary" target="_blank">Ir al sitio</a>
                     </div>
                 </div>`;
 
